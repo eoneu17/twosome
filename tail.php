@@ -1,57 +1,48 @@
-<?php
-if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
-if (G5_IS_MOBILE) {
-    include_once(G5_THEME_MOBILE_PATH.'/tail.php');
-    return;
-}
-?>
 
     </div>
-    <div id="aside">
-        <?php
-        //공지사항
-        // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
-        // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
-        // 테마의 스킨을 사용하려면 theme/basic 과 같이 지정
-        echo latest('theme/notice', 'notice', 4, 13);
-        ?>
-        <?php echo outlogin('theme/basic'); // 외부 로그인, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정 ?>
-        <?php echo poll('theme/basic'); // 설문조사, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정 ?>
-        <?php echo visit('theme/basic'); // 접속자집계, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정 ?>
+
+    
+
+
+
+
+
+
+
+    <? if(!defined('_INDEX_')) {?>
+    <div id="aside"  style="width:20%;float:left">
+       <?php  include(G5_THEME_PATH.'/skin/nav/mysubmenu.php'); ?> 
     </div>
+    <?}?>
 </div>
 
-</div>
 <!-- } 콘텐츠 끝 -->
 
 <hr>
 
-<!-- 하단 시작 { -->
-<div id="ft">
-
-    <div id="ft_wr">
-        <div id="ft_link">
-            <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=company">회사소개</a>
-            <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=privacy">개인정보처리방침</a>
-            <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=provision">서비스이용약관</a>
-            <a href="<?php echo get_device_change_url(); ?>">모바일버전</a>
-        </div>
-        <div id="ft_catch"><img src="<?php echo G5_IMG_URL; ?>/ft_logo.png" alt="<?php echo G5_VERSION ?>"></div>
-        <div id="ft_copy">Copyright &copy; <b>소유하신 도메인.</b> All rights reserved.</div>
-    </div>
-    
-    <button type="button" id="top_btn"><i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span></button>
-        <script>
-        
-        $(function() {
-            $("#top_btn").on("click", function() {
-                $("html, body").animate({scrollTop:0}, '500');
-                return false;
-            });
-        });
-        </script>
-</div>
+<footer id="realfooter">
+	<div class="footer">
+		<ul>
+			<li>사이트맵 |</li>
+			<li><a href="https://www.twosome.co.kr:7009/twosome/recruit/info.asp"> 리쿠르트 |</a></li>
+			<li><a href="https://www.twosome.co.kr:7009/etc/agreement.asp"> 이용약관 |</a></li>
+			<li style="color: #ecd56d"><a href="https://www.twosome.co.kr:7009/etc/privacy.asp"> 개인정보처리방침 |</a></li>
+			<li><a href="https://www.twosome.co.kr:7009/etc/email_dont_collect.asp"> 이메일 무단수집거부 |</a></li>
+			<li><a href="https://www.twosome.co.kr:7009/etc/legalnotice.asp">법적고지</a></li>
+		</ul>
+		<p>
+			서울시 중구 마른내로34(초동 106-9번지)KT&G을지타워 6층 투썸플레이스(주) | 대표이사:구창근 | 
+개인정보관리책임자 : 박상욱 | 고객센터 : 1577-4410
+		</p>
+		<p>
+			팩스 : 02-6740-4949 | 대표이메일 : twosomemaster@cj.net | 사업자등록번호 : 404-86-01054 | 통신판매업종신고증 : 제2018-서울중구-0353호
+		</p>
+		<p>
+			Copyright &copy;2018 A TOWSOME PLACE CO. LTD. ALL RIGHTS RESERVED.
+		</p>
+	</div>
+</footer>
 
 <?php
 if(G5_DEVICE_BUTTON_DISPLAY && !G5_IS_MOBILE) { ?>

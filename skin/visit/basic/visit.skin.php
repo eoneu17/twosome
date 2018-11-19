@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 
 global $is_admin;
@@ -7,7 +7,7 @@ global $is_admin;
 add_stylesheet('<link rel="stylesheet" href="'.$visit_skin_url.'/style.css">', 0);
 ?>
 
-접속자집계 시작 {
+<!-- 접속자집계 시작 { -->
 <section id="visit">
     <h2><i class="fa fa-users" aria-hidden="true"></i>  접속자집계</h2>
     <dl>
@@ -22,4 +22,4 @@ add_stylesheet('<link rel="stylesheet" href="'.$visit_skin_url.'/style.css">', 0
     </dl>
     <?php if ($is_admin == "super") {  ?><a href="<?php echo G5_ADMIN_URL ?>/visit_list.php" class="btn_admin">상세보기</a><?php } ?>
 </section>
-} 접속자집계 끝 -->
+<!-- } 접속자집계 끝 -->
