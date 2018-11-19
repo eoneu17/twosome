@@ -16,7 +16,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$connect_skin_url.'/style.css">',
         // 이 조건문은 가능한 변경하지 마십시오.
         if ($list[$i]['lo_url'] && $is_admin == 'super') $display_location = "<a href=\"".$list[$i]['lo_url']."\">".$location."</a>";
         else $display_location = $location;
-
+        
         $classes = array();
         if( $i && ($i % 4 == 0) ){
             $classes[] = 'box_clear';

@@ -1,13 +1,18 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
+
+if(defined('G5_THEME_PATH')) {
+    require_once(G5_THEME_PATH.'/tail.php');
+    return;
+}
 ?>
     </div>
 </div>
 
 
-<?php echo poll('theme/basic'); // 설문조사 ?>
-<?php echo popular('theme/basic'); // 인기검색어 ?>
-<?php echo visit('theme/basic'); // 방문자수 ?>
+<?php echo poll('basic'); // 설문조사 ?>
+<?php echo popular('basic'); // 인기검색어 ?>
+<?php echo visit('basic'); // 방문자수 ?>
 
 
 <div id="ft">
@@ -66,5 +71,5 @@ jQuery(function($) {
 </script>
 
 <?php
-include_once(G5_THEME_PATH."/tail.sub.php");
+include_once(G5_PATH."/tail.sub.php");
 ?>

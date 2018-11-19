@@ -416,10 +416,10 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
         }
         <?php } ?>
 
-        if (typeof f.mb_icon != "undefined") {
+        if (typeof f.mb_icon != 'undefined') {
             if (f.mb_icon.value) {
                 if (!f.mb_icon.value.toLowerCase().match(/.(gif|jpe?g|png)$/i)) {
-                    alert("회원아이콘이 이미지 파일이 아닙니다.");
+                    alert('회원아이콘이 이미지 파일이 아닙니다.');
                     f.mb_icon.focus();
                     return false;
                 }

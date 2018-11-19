@@ -19,9 +19,8 @@ $thumb_height = 150;
         $img = $thumb['src'];
     } else {
         $img = G5_IMG_URL.'/no_img.png';
-        $thumb['alt'] = '이미지가 없습니다.';
     }
-    $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" >';
+    $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" width="'.$thumb_width.'" height="'.$thumb_height.'">';
     ?>
         <li>
             <a href="<?php echo $list[$i]['href'] ?>" class="lt_img"><?php echo $img_content; ?></a>
