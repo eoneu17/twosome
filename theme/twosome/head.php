@@ -35,14 +35,14 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 </style>
 <div class="header_bg">
     <header id="header_wrap">
-    
+
             <a href="<?php echo G5_URL ?>"><img src="<?echo G5_THEME_IMG_URL?>/two/logo.png" alt="logo"></a>
-             
-    
+
+
             <ul class="gnb">
     <?php if ($is_member) {  ?>
-    
-    
+
+
                 <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php"><i class="fa fa-cog" aria-hidden="true"></i> 정보수정</a></li>
                 <li><a href="<?php echo G5_BBS_URL ?>/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> 로그아웃</a></li>
                 <?php if ($is_admin) {  ?>
@@ -54,10 +54,10 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 <?php }  ?>
                 <li>고객센터</li>
             </ul>
-             <?php  include(G5_THEME_PATH.'/skin/nav/menu.php'); ?> 
-               
-                
-            
+             <?php  include(G5_THEME_PATH.'/skin/nav/menu.php'); ?>
+
+
+
     </header>
 </div>
 
@@ -65,35 +65,35 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
     <section id="recomm_book">
     main selection
-    </section> 
+    </section>
 
 <?}else{?>
 
     <section id="recomm_book">
-    
+
     <!-- 현재위치 -->
     <span style="display:inline-block">
-    <?php 
-        $sql_menu = " select *  from ".$g5['menu_table']." 
-        where me_use = '1' 
-        and length(me_code) = '2' 
-        order by me_order, me_id "; 
-        $result_menu = sql_query($sql_menu, false); 
-        
+    <?php
+        $sql_menu = " select *  from ".$g5['menu_table']."
+        where me_use = '1'
+        and length(me_code) = '2'
+        order by me_order, me_id ";
+        $result_menu = sql_query($sql_menu, false);
 
 
-        for ($i=0; $rowMenu=sql_fetch_array($result_menu); $i++) { 
-            $rowMenu_link = explode("=",$rowMenu['me_link']); 
+
+        for ($i=0; $rowMenu=sql_fetch_array($result_menu); $i++) {
+            $rowMenu_link = explode("=",$rowMenu['me_link']);
            //echo $rowMenu_link[1];
 
-            
-      ?>      
-         <a href="<?php echo $rowMenu['me_link']; ?>" target="_<?php echo $rowMenu['me_target']; ?>" style="display:none" id="menu_link<?php echo $i ?>"><?php echo $rowMenu['me_name']; ?></a>  
+
+      ?>
+         <a href="<?php echo $rowMenu['me_link']; ?>" target="_<?php echo $rowMenu['me_target']; ?>" style="display:none" id="menu_link<?php echo $i ?>"><?php echo $rowMenu['me_name']; ?></a>
 
         <?}?>
 
     </span>
-     >   
+     >
      <? if($bo_table){echo $board['bo_subject']; }else{echo $g5['title']; }
      ?>
      <!-- 현재위치끝 -->
@@ -103,7 +103,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     <?}?>
 
     <div id="content" style="overflow:hidden">
-        <?php 
+        <?php
         if(defined('_INDEX_')) {     // index에서만 실행
         ?>
             <div class="content" style="width:100%;">
