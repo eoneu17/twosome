@@ -82,7 +82,7 @@ include_once('./_head.php');
 </style>
   <header class="sub-header">
     <div class="sub-title-img"></div>
-    <h2 class="sub-title">CLASS</h2>
+    <h2 class="sub-title">MENU</h2>
     <nav class="sub-nav">
       <button class="sub-tab active" type="button">케이크</button>
       <button class="sub-tab" type="button">커피&음료</button>

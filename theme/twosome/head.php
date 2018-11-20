@@ -15,57 +15,152 @@ include_once(G5_LIB_PATH.'/connect.lib.php');
 include_once(G5_LIB_PATH.'/popular.lib.php');
 ?>
 <style>
-    #header_wrap{width:1200px;margin:0px auto;position: relative;height: 160px;}
+    #header_wrap{width:1200px;height:100px;margin:20px auto;background:;position: relative;}
+    #header_wrap>a{font-size:50px;padding: 10px;}
+	.top_menu:after{content:"";clear: both;display: block;}
+	.top_menu{position: absolute;top:15px;right:0;}
+	.top_menu>li>a{padding-left: 20px;text-align:center;padding: 20px;}
+	.top_menu>li{float:right;}	
 
-    .header_bg{background: url(<? echo G5_THEME_IMG_URL ?>/two/bg.gif);height: 150px;width: 100%;}
-    .gnb{position: absolute;top: 0;right: 0;color: #d1d1d1;}
-    .gnb:after{content: "";display: block;clear: both}
-    .gnb li{float: left;padding: 10px;font-size: 12px}
+	.menu{background:width:700px;right: 0;position: absolute;}
+	.menu:after{content:"";clear: both;display: block;}
+	.menu>li{float:right;}	
+	.menu>li>a{font-size:15px;padding-right: 30px;}
+	.menu>li>a:hover{color:#456888; font-weight:bold;}
+	
+	.lnb{background:}
+	.lnb:after{content:"";clear: both;display: block;}
+	.lnb>li{float:left;}
+	.lnb>li>a{font-size:20px;padding-left:50px;}	
+	.lnb>li>a:hover{color:#456888; font-weight:bold;}
 
-    .nav {background: url(<? echo G5_THEME_IMG_URL ?>/two/box.png) no-repeat;height: 100px;width: 760px;float: right;margin-top: 40px;color: #d1d1d1;font-size: 18px;font-weight: bold;}
-    .nav ul{line-height: 110px;margin-left: 20px;margin-right: 20px;}
-    .nav li{width: 144px;text-align: center;}
+	#recomm_book{width: 100%;height: 600px;background:blue;position: relative;}
+	#prev{position: absolute;top:400px;left: 20px;}
+	#next{position: absolute;top:400px;right:20px;}
+    
+	#bar1{width: 1920px;height:200px;}
+	#bar2{width: 1920px;height:350px; margin:0 auto;}
+	
+	#realfooter{height: 100px;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #class-links{
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin: 20px auto;
+  }
+  #class-links a {
+    position: absolute;
+    display: block;
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    overflow: hidden;
+  }
+  #class-links img{
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+  }
 
-    .sns{width: 115px;float: right;margin-top: 75px;}
+  #class-links a:hover img{
+    transform: scale(1.2);
+  }
 
-    .side_one{position: fixed;z-index: 10;right: 50px;top: 165px;}
-    .side_two{position: fixed;z-index: 10;right: 50px;top: 278px;background: url(<? echo G5_THEME_IMG_URL ?>/two/side2.png);width: 146px;height: 97px;}
-    .side_two a{line-height: 120px;padding-left: 12px;}
+  #class-links .coffee {
+    top: 0;left: 0;
+  }
 
+  #class-links .cake {
+    bottom: 0;right: 0;
+  }
+  #class-links p{
+    position: absolute;
+    padding: 40px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    z-index: 1;
+  }
+  #class-links .cake p{
+    bottom: 0;right: 0;
+  }
+	 
 </style>
-<div class="header_bg">
-    <header id="header_wrap">
-    
-            <a href="<?php echo G5_URL ?>"><img src="<?echo G5_THEME_IMG_URL?>/two/logo.png" alt="logo"></a>
-             
-    
-            <ul class="gnb">
-    <?php if ($is_member) {  ?>
-    
-    
-                <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php"><i class="fa fa-cog" aria-hidden="true"></i> 정보수정</a></li>
-                <li><a href="<?php echo G5_BBS_URL ?>/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> 로그아웃</a></li>
-                <?php if ($is_admin) {  ?>
-                <li class="tnb_admin"><a href="<?php echo G5_ADMIN_URL ?>"><b><i class="fa fa-user-circle" aria-hidden="true"></i> 관리자</b></a></li>
-                <?php }  ?>
-                <?php } else {  ?>
-                <li><a href="<?php echo G5_BBS_URL ?>/register.php"> 회원가입</a></li>
-                <li><a href="<?php echo G5_BBS_URL ?>/login.php"><b> 로그인</b></a></li>
-                <?php }  ?>
-                <li>고객센터</li>
-            </ul>
-             <?php  include(G5_THEME_PATH.'/skin/nav/menu.php'); ?> 
-               
-                
+<script>
+      $(document).ready(function(){
+         $('.slider').bxSlider({
+            auto:true,
+            controls:false, 
+            pager:false
+         });
+         
+   
+
+         $("#prev").on("click",function(){
+            slider.goToPrevSlide();
+         });
+         $("#next").on("click",function(){
+            slider.goToNextSlide();
+         });
+   
+   
+         });
+      
+
+
+		
+	
+</script>
+<header id="header_wrap">
+
+         <a href="<?php echo G5_URL ?>">LOGO</a>
+
+		 <ul class="top_menu">
+		 <li><a href="#">날씨</a></li>
+		 <li><a href="#">흐림</a></li>
+		 <li><a href="#">비</a></li>
+		 <li><a href="#">장마</a></li>
+		 </ul>
+        
+        <ul class="menu">
+        <?php if ($is_member) {  ?>
+      
+     
+            <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php"><i class="fa fa-cog" aria-hidden="true"></i> 정보수정</a></li>
+            <li><a href="<?php echo G5_BBS_URL ?>/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> 로그아웃</a></li>
+            <?php if ($is_admin) {  ?>
+            <li class="tnb_admin"><a href="<?php echo G5_ADMIN_URL ?>"><b><i class="fa fa-user-circle" aria-hidden="true"></i> 관리자</b></a></li>
+            <?php }  ?>
+            <?php } else {  ?>
+            <li><a href="<?php echo G5_BBS_URL ?>/register.php"><i class="fa fa-user-plus" aria-hidden="true"></i> 회원가입</a></li>
+            <li><a href="<?php echo G5_BBS_URL ?>/login.php"><b><i class="fa fa-sign-in" aria-hidden="true"></i> 로그인</b></a></li>
+            <?php }  ?>
+        </ul>
+
+		
+
+         <?php  include(G5_THEME_PATH.'/skin/nav/menu.php'); ?> 
+          
             
-    </header>
-</div>
+        
+</header>
 
 <?php    if(defined('_INDEX_')) {     // index에서만 실행?>
 
     <section id="recomm_book">
-    main selection
+    <ul class="slider">
+		<li><img src="<?echo G5_THEME_IMG_URL?>/slider1.jpg" alt="a"></li>
+		<li><img src="<?echo G5_THEME_IMG_URL?>/slider2.jpg" alt="a"></li>
+		<li><img src="<?echo G5_THEME_IMG_URL?>/slider3.jpg" alt="a"></li>
+	</ul>
     </section> 
+	
 
 <?}else{?>
 
@@ -103,6 +198,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     <?}?>
 
     <div id="content" style="overflow:hidden">
+
         <?php 
         if(defined('_INDEX_')) {     // index에서만 실행
         ?>
