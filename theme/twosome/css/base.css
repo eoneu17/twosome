@@ -12,4 +12,4 @@ address,strong{font-style:normal;font-weight:normal;}
 	font-family:NGothicEB;
 	src:url('../font/NanumGothicExtraBold.woff') format('woff');}
 
-body{font:14px "NGothic",Gulim;}
+body{font:14px "NGothic",Gulim;overflow: hidden !important; width: 100% !important;}
