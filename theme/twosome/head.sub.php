@@ -66,7 +66,7 @@ var g5_editor    = "<?php echo ($config['cf_editor'] && $board['bo_use_dhtml_edi
 var g5_cookie_domain = "<?php echo G5_COOKIE_DOMAIN ?>";
 </script>
 <script src="<?php echo G5_JS_URL ?>/jquery-1.8.3.min.js"></script>
-<script src="<?php echo G5_JS_URL ?>/jquery.bxslider.js"></script>
+<script src="<?php echo G5_JS_URL ?>/jquery.bxslider.js"></script>  //jquery.bxslider.js 
 <script src="<?php echo G5_JS_URL ?>/jquery.menu.js?ver=<?php echo G5_JS_VER; ?>"></script>
 <script src="<?php echo G5_JS_URL ?>/common.js?ver=<?php echo G5_JS_VER; ?>"></script>
 <script src="<?php echo G5_JS_URL ?>/wrest.js?ver=<?php echo G5_JS_VER; ?>"></script>
