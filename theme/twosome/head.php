@@ -75,11 +75,9 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     <section id="recomm_book">
         <?if($co_id == "B1" || $co_id == "B2" || $co_id == "B3"){?>
         <img src="<? echo G5_THEME_IMG_URL ?>/two/sub_bg.png" alt="sub_bg">
-        <?}else if($co_id == "M1" || $co_id == "M2" || $co_id == "M3" || $co_id == "M4" ||$co_id == "M5"){?>
-        <img src="<? echo G5_THEME_IMG_URL ?>/two/notice.jpg" alt="menu_bg">
-        <?}else if($co_id == "C1" || $co_id == "C2"){?>
+        <?}else if($bo_table == "notice" || $fm_id == "1" || $co_id == "member" || $co_id == "event"){?>
         <img src="<? echo G5_THEME_IMG_URL ?>/two/class-title.png" alt="class_bg">
-        <?}else if($bo_table == "free"){?>
+        <?}else if($co_id == "class1" ||$co_id == "class2"){?>
         <img src="<? echo G5_THEME_IMG_URL ?>/two/store.jpg" alt="store">
         <?}else{?>
            <img src="<? echo G5_THEME_IMG_URL ?>/two/membership.jpg" alt="membership_bg">
