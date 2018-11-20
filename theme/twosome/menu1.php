@@ -225,5 +225,5 @@ include_once(G5_THEME_PATH.'/head.php');
 </script>
 
 <?php
-include_once(G5_THEME_PATH.'tail.php');
+include_once(G5_THEME_PATH.'/tail.php');
 ?>

@@ -135,11 +135,11 @@ include_once(G5_THEME_PATH.'/head.php');
     }
   </style>
   <div class="contents-wrap" id="contents-menu">
-    <section class="tab-content active">
+    <section class="tab-content">
       <div class="content-wrap" id="menu-cake"></div>
       <button id="more-cake">더보기</button>
     </section>
-    <section class="tab-content">
+    <section class="tab-content active">
       <div class="content-wrap" id="menu-drink"></div>
       <button id="more-drink">더보기</button>
     </section>
@@ -181,7 +181,7 @@ include_once(G5_THEME_PATH.'/head.php');
       }
     }
     tabMenu();
-    more('#menu-cake>div', 'more-cake');
+    // more('#menu-cake>div', 'more-cake');
     more('#menu-drink>div', 'more-drink');
   }
 
@@ -225,5 +225,5 @@ include_once(G5_THEME_PATH.'/head.php');
 </script>
 
 <?php
-include_once(G5_THEME_PATH.'tail.php');
+include_once(G5_THEME_PATH.'/tail.php');
 ?>
