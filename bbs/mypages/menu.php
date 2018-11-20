@@ -1,14 +1,19 @@
 <?php
-define('_menu_', true);
-if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
+include_once('./_common.php');
 
 if (G5_IS_MOBILE) {
-    include_once(G5_THEME_MOBILE_PATH.'/menu.php');
+    include_once(G5_MOBILE_PATH.'/class.php');
     return;
 }
 
-include_once(G5_THEME_PATH.'/head.php');
+if(!$is_admin && $group['gr_device'] == 'mobile')
+    alert($group['gr_subject'].' 그룹은 모바일에서만 접근할 수 있습니다.');
+
+$g5['title'] = "NEWS";
+$gr_id ='news';
+include_once('./_head.php');
 ?>
+
 
 <main id="main">
   <!-- depth2 tab start -->
@@ -28,7 +33,7 @@ include_once(G5_THEME_PATH.'/head.php');
 .sub-title-img {
   width: 100%;
   height: 200px;
-  background: url(<?php echo G5_THEME_IMG_URL ?>/class-title.png) no-repeat;
+  background: url(<?php echo G5_THEME_IMG_URL ?>/menu/class-title.png) no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -177,7 +182,7 @@ include_once(G5_THEME_PATH.'/head.php');
         var div_menu = document.createElement('div')
         var div = document.createElement('div');
         var img = document.createElement('img');
-        img.src = "<?php echo G5_THEME_IMG_URL ?>/" + menu + '-' + count + '.png';
+        img.src = "<?php echo G5_THEME_IMG_URL ?>/menu/" + menu + '-' + count + '.png';
         var h3 = document.createElement('h3');
         i === 0 ? h3.appendChild(document.createTextNode(cakeNames[count - 1])) : h3.appendChild(document.createTextNode(drinkNames[count - 1]));
         div.appendChild(img);
@@ -231,5 +236,5 @@ include_once(G5_THEME_PATH.'/head.php');
 </script>
 
 <?php
-include_once(G5_THEME_PATH.'/tail.php');
+include_once('./_tail.php');
 ?>
