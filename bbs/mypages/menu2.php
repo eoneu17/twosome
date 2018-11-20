@@ -146,11 +146,11 @@ include_once('./_head.php');
     }
   </style>
   <div class="contents-wrap" id="contents-menu">
-    <section class="tab-content active">
+    <section class="tab-content">
       <div class="content-wrap" id="menu-cake"></div>
       <button id="more-cake">더보기</button>
     </section>
-    <section class="tab-content">
+    <section class="tab-content active">
       <div class="content-wrap" id="menu-drink"></div>
       <button id="more-drink">더보기</button>
     </section>
@@ -178,21 +178,20 @@ include_once('./_head.php');
     var count;
     for (var i = 0; i < 2; i++) {
       for (count = 1; count <= 24; count++) {
-        menu = 'cake';
+        menu = 'drink';
         var div_menu = document.createElement('div')
         var div = document.createElement('div');
         var img = document.createElement('img');
         img.src = "<?php echo G5_THEME_IMG_URL ?>/menu/" + menu + '-' + count + '.png';
         var h3 = document.createElement('h3');
-        h3.appendChild(document.createTextNode(cakeNames[count - 1]))
+        h3.appendChild(document.createTextNode(drinkNames[count - 1]));
         div.appendChild(img);
         div_menu.appendChild(div);
         div_menu.appendChild(h3);
-        contents[0].appendChild(div_menu);
+        contents[1].appendChild(div_menu);
       }
     }
     tabMenu();
-    more('#menu-cake>div', 'more-cake');
     more('#menu-drink>div', 'more-drink');
   }
 
