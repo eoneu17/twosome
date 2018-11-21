@@ -8,14 +8,13 @@ include_once(G5_THEME_PATH.'/head.php');
   <!-- depth2 tab start -->
   <style>
   body {
-  font-family: 'Noto Sans KR', sans-serif;
   background: #fff;
   word-break: keep-all;
 }
     #main {
   margin-bottom: 100px;
 }
-
+/*
 .sub-header {
   margin-bottom: 100px;
 }
@@ -54,7 +53,7 @@ include_once(G5_THEME_PATH.'/head.php');
   background: #B30317;
   color: #ebebeb;
   font-weight: bold;
-}
+} */
 
 .contents-wrap {
   margin: 0 auto;
@@ -70,7 +69,7 @@ include_once(G5_THEME_PATH.'/head.php');
   display: block;
 }
 </style>
-  <header class="sub-header" style="display:none;">
+  <!-- <header class="sub-header" style="display:none;">
     <div class="sub-title-img"></div>
     <h2 class="sub-title">CLASS</h2>
     <nav class="sub-nav">
@@ -80,7 +79,7 @@ include_once(G5_THEME_PATH.'/head.php');
       <button class="sub-tab" type="button">MD</button>
       <button class="sub-tab" type="button">단체구매</button>
     </nav>
-  </header>
+  </header> -->
   <!-- depth2 tab end -->
 
   <!-- contents start -->

@@ -89,7 +89,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 
     <!-- 현재위치 -->
-    <span style="display:inline-block">
+    <!-- <span style="display:inline-block">
     <?php
         $sql_menu = " select *  from ".$g5['menu_table']."
         where me_use = '1'
@@ -112,7 +112,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     </span>
      >
      <? if($bo_table){echo $board['bo_subject']; }else{echo $g5['title']; }
-     ?>
+     ?> -->
      <!-- 현재위치끝 -->
 
     </section>
