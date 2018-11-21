@@ -138,10 +138,10 @@ display: inline-block;
 width: 240px;
 height: 50px;
 margin: 0;
-border-left: 2px solid #B30317;
-border-right: 2px solid #B30317;
-border-top: 2px solid #B30317;
-border-bottom: 2px solid #B30317;
+border-left: 1px solid #B30317;
+border-right: 1px solid #B30317;
+border-top: 1px solid #B30317;
+border-bottom: 1px solid #B30317;
 background: #ffffff;
 color: #B30317;
 text-align: center;
@@ -157,7 +157,7 @@ font-size:16px;
 .sub-tab.active {
 border: none;
 background: #B30317;
-color: #ebebeb;
+color: #ffffff;
 }
 </style>
          <?if($co_id == "B1" || $co_id == "B2" || $co_id == "B3"){?>
@@ -185,7 +185,7 @@ color: #ebebeb;
             <!-- 공지사항 -->
             <nav class="sub-nav">
               <a href="<? echo G5_BBS_URL;?>/content.php?bo_table=notice" class="sub-tab <?if($bo_table == "notice"){echo " active";}?>">공지사항</a>
-              <a href="<? echo G5_BBS_URL;?>/content.php?fm_id=1" class="sub-tab <?if($fm_id == "1"){echo " active";}?>">FAQ</a>
+              <a href="<? echo G5_BBS_URL;?>/content.php?faq.php?fm_id=1" class="sub-tab <?if($fm_id == "1"){echo " active";}?>">FAQ</a>
               <a href="<? echo G5_BBS_URL;?>/content.php?co_id=member" class="sub-tab <?if($co_id == "member"){echo " active";}?>">CJ ONE 멤버십</a>
               <a href="<? echo G5_BBS_URL;?>/content.php?co_id=event" class="sub-tab <?if($co_id == "event"){echo " active";}?>">이벤트</a>
             </nav>
