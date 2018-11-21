@@ -89,7 +89,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 
     <!-- 현재위치 -->
-    <!-- <span style="display:inline-block">
+    <span style="display:inline-block">
     <?php
         $sql_menu = " select *  from ".$g5['menu_table']."
         where me_use = '1'
@@ -110,9 +110,9 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         <?}?>
 
     </span>
-     >
+     
      <? if($bo_table){echo $board['bo_subject']; }else{echo $g5['title']; }
-     ?> -->
+     ?>
      <!-- 현재위치끝 -->
 
     </section>
@@ -164,8 +164,8 @@ color: #ffffff;
            <!-- 브랜드 -->
                <nav class="sub-nav">
                  <a href="<? echo G5_BBS_URL;?>/content.php?co_id=B1" class="sub-tab <?if($co_id == "B1"){echo " active";}?>">브랜드이야기</a>
-                 <a href="<? echo G5_BBS_URL;?>/content.php?co_id=B2" class="sub-tab <?if($co_id == "B2"){echo " active";}?>">커피이야기</a>
-                 <a href="<? echo G5_BBS_URL;?>/content.php?co_id=B3" class="sub-tab <?if($co_id == "B3"){echo " active";}?>">디저트이야기</a>
+                 <a href="<? echo G5_BBS_URL;?>/content.php?co_id=B2" class="sub-tab <?if($co_id == "B2"){echo " active";}?>" style="border-left:0;">커피이야기</a>
+                 <a href="<? echo G5_BBS_URL;?>/content.php?co_id=B3" class="sub-tab <?if($co_id == "B3"){echo " active";}?>" style="border-left:0;">디저트이야기</a>
                </nav>
 
 
@@ -173,7 +173,7 @@ color: #ffffff;
             <!-- 클래스 -->
             <nav class="sub-nav">
               <a href="<? echo G5_BBS_URL;?>/content.php?co_id=C1" class="sub-tab <?if($co_id == "C1"){echo " active";}?>">케이크 클래스</a>
-              <a href="<? echo G5_BBS_URL;?>/content.php?co_id=C2" class="sub-tab <?if($co_id == "C2"){echo " active";}?>">커피 클래스</a>
+              <a href="<? echo G5_BBS_URL;?>/content.php?co_id=C2" class="sub-tab <?if($co_id == "C2"){echo " active";}?>" style="border-left:0;">커피 클래스</a>
             </nav>
 
         <?}else if($co_id == "store"){?>
@@ -185,9 +185,9 @@ color: #ffffff;
             <!-- 공지사항 -->
             <nav class="sub-nav">
               <a href="<? echo G5_BBS_URL;?>/board.php?bo_table=notice" class="sub-tab <?if($bo_table == "notice"){echo " active";}?>">공지사항</a>
-              <a href="<? echo G5_BBS_URL;?>/faq.php?fm_id=1" class="sub-tab <?if($fm_id == "1"){echo " active";}?>">FAQ</a>
-              <a href="<? echo G5_BBS_URL;?>/content.php?co_id=member" class="sub-tab <?if($co_id == "member"){echo " active";}?>">CJ ONE 멤버십</a>
-              <a href="<? echo G5_BBS_URL;?>/content.php?co_id=event" class="sub-tab <?if($co_id == "event"){echo " active";}?>">이벤트</a>
+              <a href="<? echo G5_BBS_URL;?>/faq.php?fm_id=1" class="sub-tab <?if($fm_id == "1"){echo " active";}?>" style="border-left:0;">FAQ</a>
+              <a href="<? echo G5_BBS_URL;?>/content.php?co_id=member" class="sub-tab <?if($co_id == "member"){echo " active";}?>" style="border-left:0;">CJ ONE 멤버십</a>
+              <a href="<? echo G5_BBS_URL;?>/content.php?co_id=event" class="sub-tab <?if($co_id == "event"){echo " active";}?>" style="border-left:0;">이벤트</a>
             </nav>
 
         <?}else{?>
@@ -195,10 +195,10 @@ color: #ffffff;
 
               <nav class="sub-nav">
                 <a href="http://woonhee.dothome.co.kr/main/theme/basic1st/menu1.php" class="sub-tab <?if($s_menu == "01"){echo " active";}?>">케이크</a>
-                <a href="http://woonhee.dothome.co.kr/main/theme/basic1st/menu2.php" class="sub-tab <?if($s_menu == "02"){echo " active";}?>">커피&음료</a>
-                <a href="<? echo G5_BBS_URL;?>/content.php?co_id=M3" class="sub-tab <?if($co_id=="M3"){echo " active";}?>">푸드</a>
-                <a href="<? echo G5_BBS_URL;?>/content.php?co_id=M4" class="sub-tab <?if($co_id=="M4"){echo " active";}?>">MD</a>
-                <a href="<? echo G5_BBS_URL;?>/content.php?co_id=M5" class="sub-tab <?if($co_id=="M5"){echo " active";}?>">단체구매</a>
+                <a href="http://woonhee.dothome.co.kr/main/theme/basic1st/menu2.php" class="sub-tab <?if($s_menu == "02"){echo " active";}?>" style="border-left:0;">커피&음료</a>
+                <a href="<? echo G5_BBS_URL;?>/content.php?co_id=M3" class="sub-tab <?if($co_id=="M3"){echo " active";}?>" style="border-left:0;">푸드</a>
+                <a href="<? echo G5_BBS_URL;?>/content.php?co_id=M4" class="sub-tab <?if($co_id=="M4"){echo " active";}?>" style="border-left:0;">MD</a>
+                <a href="<? echo G5_BBS_URL;?>/content.php?co_id=M5" class="sub-tab <?if($co_id=="M5"){echo " active";}?>" style="border-left:0;">단체구매</a>
               </nav>
         <?}?>
 

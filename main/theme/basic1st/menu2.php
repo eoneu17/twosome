@@ -15,8 +15,8 @@ include_once(G5_THEME_PATH.'/head.php');
 }
     #main {
   margin-bottom: 100px;
-/* }
-
+}
+/*
 .sub-header {
   margin-bottom: 100px;
 }
@@ -57,8 +57,11 @@ include_once(G5_THEME_PATH.'/head.php');
   font-weight: bold;
 } */
 
+
+
 .contents-wrap {
   margin: 0 auto;
+  margin-top: 30px;
   width: 1200px;
 }
 
@@ -137,20 +140,32 @@ include_once(G5_THEME_PATH.'/head.php');
     }
 
     #modal{
-      position: fixed !important;
+      position: fixed;
       top: 50%;left: 50%;
       transform: translate(-50%, -50%) scale(0);
-      width:900px;
+      width:100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0,0,0,.3);
+      opacity: 0;
+      z-index: 5;
+    }
+
+    #modal .modal-box{
+      width: 900px;
       height: 500px;
       display: flex;
-      position: relative;
       justify-content: center;
       align-items: center;
       background: #B30317;
-      transition: .5s;
+      transform: scale(0);
       opacity: 0;
+      transition: 0.5s;
       z-index: 10;
     }
+
     #modal .close{
       position: absolute;
       top: 0;right: 10px;
@@ -192,6 +207,7 @@ include_once(G5_THEME_PATH.'/head.php');
     #modal button{
       display: block;
       margin: 20px auto;
+      border: 1px solid #ebebeb;
     }
     #modal .btn-price{
       font-size: 18px;
@@ -241,7 +257,7 @@ include_once(G5_THEME_PATH.'/head.php');
     </section>
   </div>
   <div id="modal">
-    <span class="close">&times;</span>
+    <div class="modal-box"><span class="close">&times;</span>
     <div class="img">
       <img class="menu-img">
     </div>
@@ -251,7 +267,7 @@ include_once(G5_THEME_PATH.'/head.php');
       <button class="btn-price">₩5600</button>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa hic aspernatur facere ipsam dicta neque libero repellat omnis. Possimus, aperiam</p>
       <button class="btn-ntr">영양성분보기</button>
-    </div>
+    </div></div>
   </div>
   <!-- contents end -->
 
@@ -287,6 +303,7 @@ include_once(G5_THEME_PATH.'/head.php');
     function modal() {
       var menuList=document.querySelectorAll('.content-wrap>div');
       var modal = document.getElementById('modal');
+      var box=modal.querySelector('.modal-box');
       var close_btn = document.querySelector('#modal .close');
       Array.prototype.forEach.call(menuList, function(menu) {
         menu.addEventListener('click', open);
@@ -300,14 +317,18 @@ include_once(G5_THEME_PATH.'/head.php');
       function open() {
         var i = Array.prototype.indexOf.call(menuList, this);
         var modalImg = document.querySelector('#modal img');
-        modalImg.src = "<?php echo G5_THEME_IMG_URL ?>/menu/" + menu + '-' + i + '.png';
+        modalImg.src = "<?php echo G5_THEME_IMG_URL ?>/menu/" + menu + '-' + (i+1) + '.png';
         document.querySelector('#modal h3').textContent=drinkNames[i];
         modal.style.transform = 'translate(-50%, -50%) scale(1)';
+        box.style.transform = 'scale(1)';
         modal.style.opacity='1';
+        box.style.opacity='1';
       }
       function close() {
         modal.style.transform = 'translate(-50%, -50%) scale(0)';
+        box.style.transform = 'scale(0)';
         modal.style.opacity=0;
+        box.style.opacity=0;
       }
     }
   }
