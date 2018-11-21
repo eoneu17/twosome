@@ -1,4 +1,5 @@
 <?php
+$s_menu='01';
 include_once('./_common.php');
 include_once(G5_THEME_PATH.'/head.php');
 ?>
@@ -278,7 +279,7 @@ include_once(G5_THEME_PATH.'/head.php');
         contents[0].appendChild(div_menu);
       }
     }
-    tabMenu();
+    // tabMenu();
     more('#menu-cake>div', 'more-cake');
     // more('#menu-drink>div', 'more-drink');
     modal();
