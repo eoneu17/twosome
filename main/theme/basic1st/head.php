@@ -184,8 +184,8 @@ color: #ffffff;
         <?}else if($bo_table == "notice"||$fm_id == "1"||$co_id == "member"||$co_id == "event"){?>
             <!-- 공지사항 -->
             <nav class="sub-nav">
-              <a href="<? echo G5_BBS_URL;?>/content.php?bo_table=notice" class="sub-tab <?if($bo_table == "notice"){echo " active";}?>">공지사항</a>
-              <a href="<? echo G5_BBS_URL;?>/content.php?faq.php?fm_id=1" class="sub-tab <?if($fm_id == "1"){echo " active";}?>">FAQ</a>
+              <a href="<? echo G5_BBS_URL;?>/board.php?bo_table=notice" class="sub-tab <?if($bo_table == "notice"){echo " active";}?>">공지사항</a>
+              <a href="<? echo G5_BBS_URL;?>/faq.php?fm_id=1" class="sub-tab <?if($fm_id == "1"){echo " active";}?>">FAQ</a>
               <a href="<? echo G5_BBS_URL;?>/content.php?co_id=member" class="sub-tab <?if($co_id == "member"){echo " active";}?>">CJ ONE 멤버십</a>
               <a href="<? echo G5_BBS_URL;?>/content.php?co_id=event" class="sub-tab <?if($co_id == "event"){echo " active";}?>">이벤트</a>
             </nav>
