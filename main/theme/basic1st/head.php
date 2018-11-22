@@ -110,7 +110,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         <?}?>
 
     </span>
-     
+
      <? if($bo_table){echo $board['bo_subject']; }else{echo $g5['title']; }
      ?>
      <!-- 현재위치끝 -->
@@ -129,6 +129,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 <style>
 .sub-nav {
 margin-top: 50px;
+margin-bottom: 100px;
 display: flex;
 justify-content: center;
 }
